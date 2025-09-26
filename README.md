@@ -14,7 +14,7 @@ Git adalah salah satu *Version Control System (VCS)* yang populer digunakan untu
 - Laptop/PC dengan sistem operasi **Windows 10/11**.
 - Koneksi internet.
 - File installer Git yang dapat diunduh dari situs resmi: [https://git-scm.com/downloads](https://git-scm.com/downloads).
-
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/b29e5d68-1165-4987-b0f7-5a1210390df8" />
 ## 4. Langkah Instalasi
 
 ### 4.1. Download Git
