@@ -1,5 +1,7 @@
-Fiari Ahmad Juliasnyah
-4523210048 -P.PBW A
+**Nama : Fiari Ahmad Juliasnyah**
+**NPM : 4523210048**
+**Mata Kuliah : P.PBW A**
+
 # Laporan Instalasi Git
 
 ## 1. Pendahuluan
