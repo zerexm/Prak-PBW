@@ -1,61 +1,178 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# **FIARI AHMAD JULIANSYAH**
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# **NPM:4523210048**
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# 📌 Praktikum 3 - LARAPRESS aplikasi blog sederhana
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📝 Deskripsi
+LaraPress adalah aplikasi blog sederhana yang dibangun menggunakan Laravel 12 untuk tujuan pembelajaran dan pengembangan keterampilan web development
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ⚙️ **Tentang Proyek**
+Proyek ini dibuat sebagai bagian dari pembelajaran Laravel framework. LaraPress mendemonstrasikan konsep-konsep dasar Laravel seperti routing, views, dan struktur MVC.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Fitur yang Sudah Diimplementasikan**
+   - Data disimpan ke dalam file teks `pendaftar.txt` dengan format:
+     ```
+     Nama;Email;TanggalLahir
+     ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Halaman Utama (Welcome Page)**
+  - Mengubah tampilan default Laravel menjadi halaman sederhana
+  - Menampilkan judul "Selamat Datang di LaraPress"
+  - Struktur HTML yang bersih dan minimal.
 
-## Laravel Sponsors
+2. **Halaman Tentang Kami**
+   - Route: /tentang-kami
+   - Menampilkan informasi tentang LaraPress
+   - Menjelaskan tujuan proyek sebagai pembelajaran Laravel 12
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 📁 Struktur File yang Dimodifikasi
+- **resources/views/welcome.blade.php**  
+  Mengubah tampilan default Laravel menjadi HTML sederhana dan menampilkan pesan sambutan.  
 
-### Premium Partners
+- **resources/views/about.blade.php (baru)**  
+  File view baru untuk halaman "Tentang Kami".  
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **routes/web.php**  
+  Menambahkan route `/tentang-kami` yang mengarah ke view `about.blade.php`.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🛠️ Langkah Implementasi
 
-## Code of Conduct
+### Step 1: Modifikasi Halaman Welcome
+File: `resources/views/welcome.blade.php`
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Datang di LaraPress</title>
+</head>
+<body>
+  <h1>Selamat Datang di Blog LaraPress</h1>
+  <p>Ini adalah halaman utama dari aplikasi blog kita.</p>
+</body>
+</html>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Step 2: Membuat Route Baru
 
-## Security Vulnerabilities
+Tambahkan route baru pada file routes/web.php:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Route::get('/tentang-kami', function () {
+    return view('about');
+});
 
-## License
+### Step 3: Membuat View About
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Buat file baru resources/views/about.blade.php:
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - LaraPress</title>
+</head>
+<body>
+  <h1>Tentang LaraPress</h1>
+  <p>LaraPress adalah aplikasi blog sederhana yang dibuat dengan Laravel 12.</p>
+  <p>Proyek ini dibuat untuk tujuan pembelajaran dan pengembangan keterampilan.</p>
+</body>
+</html>
+
+## 🌐 Endpoint yang Tersedia
+Route	Method	Deskripsi
+/	GET	Halaman utama LaraPress
+/tentang-kami	GET	Halaman tentang LaraPress
+## 💻 Teknologi yang Digunakan
+
+Framework: Laravel 12
+
+PHP Version: 8.x
+
+Database: SQLite (default)
+
+Frontend: Blade Template Engine, HTML, CSS
+
+Build Tool: Vite
+
+## 📦 Instalasi
+Step 1: Clone Repository
+git clone https://github.com/adiwp/pbw.git
+cd pro1
+
+### Step 2: Install Dependencies
+composer install
+npm install
+
+### Step 3: Setup File Environment
+cp .env.example .env
+
+### Step 4: Generate Application Key
+php artisan key:generate
+
+### Step 5: Jalankan Development Server
+php artisan serve
+
+### Step 6: Akses Aplikasi
+
+Buka browser lalu masuk ke:
+👉 http://localhost:8000
+
+##📸 Screenshot
+Halaman Utama
+
+Halaman Tentang Kami
+
+## 🔄 Git History
+
+Seluruh perubahan sudah di-commit dan di-push dengan pesan commit yang jelas untuk setiap modifikasi.
+
+## 📝 Rencana Pengembangan
+
+ Menambahkan sistem autentikasi
+
+ Membuat fitur CRUD untuk artikel blog
+
+ Menambahkan sistem komentar
+
+ Implementasi kategori dan tag
+
+ Membuat dashboard admin
+
+ Menambahkan styling dengan Tailwind CSS
+
+ Implementasi fitur pencarian
+
+## 👨‍💻 Pengembang
+
+Nama: Adi Wahyu
+
+Repository: pbw
+
+Branch: main
+
+## 📄 Lisensi
+
+Proyek ini menggunakan lisensi MIT - lihat file LICENSE
+ untuk detail lebih lanjut.
+
+## 📜 Catatan
+
+Proyek ini dibuat untuk tujuan pembelajaran.
+Silakan lakukan fork dan modifikasi sesuai kebutuhan Anda!
+
+## 🤝 Kontribusi
+
+Dalam rangka memastikan komunitas Laravel tetap ramah untuk semua, harap patuhi Code of Conduct.
+
+## 🔐 Keamanan
+
+Jika menemukan kerentanan keamanan dalam Laravel, segera hubungi fiariahmad di fiariahmad@laravel.com
+. Semua masalah keamanan akan segera ditangani.
